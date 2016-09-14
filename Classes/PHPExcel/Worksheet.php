@@ -349,9 +349,9 @@ class PHPExcel_Worksheet implements PHPExcel_IComparable
         // Set sheet view
         $this->sheetView              = new PHPExcel_Worksheet_SheetView();
         // Drawing collection
-        $this->drawingCollection      = new ArrayObject();
+        $this->drawingCollection      = new ArrayIterator(array()); //new ArrayObject();
         // Chart collection
-        $this->chartCollection        = new ArrayObject();
+        $this->chartCollection        = new ArrayIterator(array()); //new ArrayObject();
         // Protection
         $this->protection             = new PHPExcel_Worksheet_Protection();
         // Default row dimension
