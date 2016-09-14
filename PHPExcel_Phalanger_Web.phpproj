@@ -380,7 +380,6 @@
     <Compile Include="unitTests\Classes\PHPExcel\Calculation\MathTrigTest.php" />
     <Compile Include="unitTests\Classes\PHPExcel\Calculation\TextDataTest.php" />
     <Compile Include="unitTests\Classes\PHPExcel\CellTest.php" />
-    <Compile Include="unitTests\Classes\PHPExcel\Cell\AdvancedValueBinderTest.php" />
     <Compile Include="unitTests\Classes\PHPExcel\Cell\DataTypeTest.php" />
     <Compile Include="unitTests\Classes\PHPExcel\Cell\DefaultValueBinderTest.php" />
     <Compile Include="unitTests\Classes\PHPExcel\Cell\HyperlinkTest.php" />

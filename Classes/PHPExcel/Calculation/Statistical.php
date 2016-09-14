@@ -800,6 +800,40 @@ class PHPExcel_Calculation_Statistical
         }
     }
 
+    /**
+     * List of error codes
+     *
+     * @access    private
+     * @var array
+     */
+    protected static $errorCodes = array(
+        'null'           => '#NULL!',
+        'divisionbyzero' => '#DIV/0!',
+        'value'          => '#VALUE!',
+        'reference'      => '#REF!',
+        'name'           => '#NAME?',
+        'num'            => '#NUM!',
+        'na'             => '#N/A',
+        'gettingdata'    => '#GETTING_DATA'
+    );
+    
+    /**
+     * NA
+     *
+     * Excel Function:
+     *        =NA()
+     *
+     * Returns the error value #N/A
+     *        #N/A is the error value that means "no value is available."
+     *
+     * @access    public
+     * @category Logical Functions
+     * @return    string    #N/A!
+     */
+    public static function NA()
+    {
+        return self::$errorCodes['na'];
+    }
 
     /**
      * AVERAGEA
