@@ -22,6 +22,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="PhpNetZip, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2771987119c16a03">
+      <Name>PhpNetZip</Name>
+      <AssemblyName>PhpNetZip.dll</AssemblyName>
+      <HintPath>E:\MyCode\PHPExcel_Phalanger\PHPExcel\Lib\PhpNetZip.dll</HintPath>
+    </Reference>
     <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   </ItemGroup>

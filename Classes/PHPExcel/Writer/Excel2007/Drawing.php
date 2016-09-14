@@ -576,7 +576,8 @@ class PHPExcel_Writer_Excel2007_Drawing extends PHPExcel_Writer_Excel2007_Writer
         $sheetCount = $pPHPExcel->getSheetCount();
         for ($i = 0; $i < $sheetCount; ++$i) {
             // Loop through images and add to array
-            $iterator = $pPHPExcel->getSheet($i)->getDrawingCollection()->getIterator();
+            //$iterator = $pPHPExcel->getSheet($i)->getDrawingCollection()->getIterator();
+            $iterator = $pPHPExcel->getSheet($i)->getDrawingCollection();
             while ($iterator->valid()) {
                 $aDrawings[] = $iterator->current();
 
