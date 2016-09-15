@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__FILE__) . '/Ext_XMLWriter.php';
+
 if (!defined('DATE_W3C')) {
     define('DATE_W3C', 'Y-m-d\TH:i:sP');
 }

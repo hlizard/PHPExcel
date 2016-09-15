@@ -138,6 +138,7 @@
     <Compile Include="Classes\PHPExcel\Shared\Escher\DggContainer\BstoreContainer\BSE.php" />
     <Compile Include="Classes\PHPExcel\Shared\Escher\DggContainer\BstoreContainer\BSE\Blip.php" />
     <Compile Include="Classes\PHPExcel\Shared\Excel5.php" />
+    <Compile Include="Classes\PHPExcel\Shared\Ext_XMLWriter.php" />
     <Compile Include="Classes\PHPExcel\Shared\File.php" />
     <Compile Include="Classes\PHPExcel\Shared\Font.php" />
     <Compile Include="Classes\PHPExcel\Shared\JAMA\CholeskyDecomposition.php" />
