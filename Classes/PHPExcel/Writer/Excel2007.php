@@ -226,14 +226,25 @@ class PHPExcel_Writer_Excel2007 extends PHPExcel_Writer_Abstract implements PHPE
             $zipOverWrite = $ro->getConstant('OVERWRITE');
             $zipCreate = $ro->getConstant('CREATE');
 
-            if (file_exists($pFilename)) {
-                unlink($pFilename);
-            }
+            //if (file_exists($pFilename)) {
+            //    unlink($pFilename);     //delete file
+            //}
             // Try opening the ZIP file
-            if ($objZip->open($pFilename, $zipOverWrite) !== true) {
-                if ($objZip->open($pFilename, $zipCreate) !== true) {
-                    throw new PHPExcel_Writer_Exception("Could not open " . $pFilename . " for writing.");
+            //if ($objZip->open($pFilename, $zipOverWrite) !== true) {
+            //    if ($objZip->open($pFilename, $zipCreate) !== true) {
+            //        throw new PHPExcel_Writer_Exception("Could not open " . $pFilename . " for writing.");
+            //    }
+            //}
+            try{
+                try{
+                    $objZip->open($pFilename, $zipOverWrite);
                 }
+                catch(FileNotFoundException $e){
+                    $objZip->open($pFilename, $zipCreate | $zipOverWrite);  //can NOT create! just open exist.
+                }
+            }
+            catch(Exception $e1){
+                throw new PHPExcel_Writer_Exception("Could not open " . $pFilename . " for writing.");
             }
 
             // Add [Content_Types].xml to ZIP file
