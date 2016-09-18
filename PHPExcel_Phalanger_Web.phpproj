@@ -29,8 +29,14 @@
     </Reference>
     <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>System.Xml</Name>
+      <AssemblyName>System.Xml.dll</AssemblyName>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.Xml.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\XmlWriterHelper.cs" />
     <Compile Include="Build\PharStub.php" />
     <Compile Include="Classes\PHPExcel.php" />
     <Compile Include="Classes\PHPExcel\Autoloader.php" />
@@ -866,6 +872,7 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="Build\" />
     <Folder Include="Classes\" />
     <Folder Include="Classes\PHPExcel\" />
