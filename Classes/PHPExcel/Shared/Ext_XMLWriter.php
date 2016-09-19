@@ -3,6 +3,8 @@
 use \System\Xml\XmlTextWriter;
 use System\Text\Encoding;
 use System\IO\MemoryStream;
+use \PHP\Library\Iconv\PhpNetIconv;
+use PHP\Library\Strings\MultiByteString;
 
 class XMLWriter
 {
@@ -58,9 +60,15 @@ class XMLWriter
     
     public function writeElement($name, $content = NULL)
     {
+        //if($content==null)
+        //{
+        //    $this->_writer->WriteElementString($name);
+        //    return true;
+        //}
+
         $this->startElement($name);
 
-
+        if($content!=null)
         $this->_writer->WriteValue($content);
 
 
@@ -82,7 +90,15 @@ class XMLWriter
 		$this->_buffer->Position = 0;
 		$sr = new System\IO\StreamReader($this->_buffer, $this->_encoding);
 		$myStr = $sr->ReadToEnd();
-        return $myStr;
+        return iconv("GBK", "UTF-8", $myStr);
+        //return mb_convert_encoding($myStr, $this->_encoding->EncodingName, "GBK");    //没有定义
+        
+        //效果同iconv
+        //$fromEncoding = Encoding::GetEncoding("GBK");
+        //$toEncoding = Encoding::$UTF8;
+        //$fromBytes = $fromEncoding->GetBytes($myStr);
+        //$toBytes = Encoding::Convert($fromEncoding, $toEncoding, $fromBytes);
+        //return $toBytes;
     }
 
 }
